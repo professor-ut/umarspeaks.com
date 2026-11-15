@@ -1,0 +1,69 @@
+/* umarspeaks.com — shared styles
+   Brand colors
+   --green:   #00694E  (primary)
+   --forest:  #0B3D2E  (dark sections, footer)
+   --teal:    #20786C
+   --mint:    #E4F3F0  (light sections)
+   --mint-2:  #CFE7E0
+   --gold:    #D9B44A  (accent buttons)
+   --ink:     #10251D  (body text)
+   --muted:   #3D5A50  (secondary text)
+   Fonts: Archivo (headlines), IBM Plex Sans (body), loaded from Google Fonts in each page's <head>.
+*/
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #F6FAF8; color: #10251D; font-family: 'IBM Plex Sans', system-ui, sans-serif; }
+img { max-width: 100%; }
+a { color: #00694E; }
+a:hover { color: #004D39; }
+
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+
+.disp { font-family: 'Archivo', sans-serif; font-stretch: 75%; font-weight: 800; text-transform: uppercase; line-height: 0.95; margin: 0; }
+.eyebrow { font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #00694E; margin: 0; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 24px; border-radius: 4px; background: #00694E; color: #FFFFFF; font-weight: 600; font-size: 16px; text-decoration: none; border: 0; font-family: inherit; cursor: pointer; }
+.btn:hover { background: #004D39; color: #FFFFFF; }
+.btn-line { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 22px; border-radius: 4px; border: 2px solid #00694E; color: #00694E; background: transparent; font-weight: 600; font-size: 16px; text-decoration: none; font-family: inherit; cursor: pointer; }
+.btn-line:hover { background: #E4F3F0; color: #004D39; }
+.btn-gold { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 24px; border-radius: 4px; background: #D9B44A; color: #10251D; font-weight: 600; font-size: 16px; text-decoration: none; }
+.btn-gold:hover { background: #E6C76A; color: #10251D; }
+
+.nav a { color: #10251D; text-decoration: none; font-weight: 500; font-size: 15px; padding: 12px 0; }
+.nav a:hover { color: #00694E; }
+.nav a.btn { color: #FFFFFF; padding: 0 20px; }
+
+.field { min-height: 48px; width: 100%; padding: 0 14px; border: 1px solid #9DBDB2; border-radius: 4px; font-size: 16px; font-family: inherit; background: #FFFFFF; color: #10251D; }
+textarea.field { padding: 12px 14px; }
+
+.opt { min-height: 52px; padding: 0 18px; border: 1px solid #9DBDB2; border-radius: 6px; background: #FFFFFF; font-family: inherit; font-size: 16px; color: #10251D; text-align: left; cursor: pointer; }
+.opt:hover { border-color: #00694E; background: #E4F3F0; }
+
+.chip { min-height: 44px; padding: 0 18px; border-radius: 22px; border: 1px solid #9DBDB2; background: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 500; color: #10251D; cursor: pointer; }
+.chip:hover { border-color: #00694E; }
+
+.issue { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding: 22px 0; border-top: 1px solid #CFE7E0; text-decoration: none; color: #10251D; }
+.issue:hover { color: #00694E; }
+
+.route { display: flex; flex-direction: column; gap: 6px; padding: 22px 0; border-top: 1px solid #9DBDB2; text-decoration: none; color: #10251D; }
+.route:hover { color: #00694E; }
+
+.billing-btn { min-height: 44px; padding: 0 20px; border-radius: 22px; border: 0; background: transparent; color: #10251D; font-family: inherit; font-size: 15px; font-weight: 500; cursor: pointer; }
+.billing-btn[aria-pressed="true"] { background: #00694E; color: #FFFFFF; font-weight: 600; }
+
+.foot a { color: #CFE7E0; text-decoration: none; }
+.foot a:hover { color: #FFFFFF; }
+
+:focus-visible { outline: 3px solid #D9B44A; outline-offset: 2px; }
+
+@media (max-width: 720px) {
+  .wrap { padding: 0 20px; }
+  .hero-h { font-size: 52px !important; }
+  .sec-h { font-size: 40px !important; }
+}
+@media (max-width: 420px) {
+  .hero-h { font-size: 44px !important; }
+  .sec-h { font-size: 36px !important; }
+}
+.disp { overflow-wrap: break-word; }
