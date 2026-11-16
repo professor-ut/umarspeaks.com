@@ -53,7 +53,7 @@ Search the files for `[` to find every placeholder, such as `[YOUR PRICE]`, `[X]
 - Refer to him as **Dr. U.T. Muhammad**. "Umar T. Muhammad, LLC" is used only as the business name.
 - "Sport" means the lived experience; "Sports" means the commercial product. When copy describes what is taken from athletes or families, use "Sports."
 - Sport as Lived Practice (SLP) branding appears only on `slp.html`.
-- No references to Ohio University or the Alliance for Sport Business.
+- Ohio University appears only in the Educator section of `about.html`. No references to the Alliance for Sport Business.
 - Every data point shows its source on the page. Recheck figures from 2025 and early 2026 before launch.
 
 © Umar T. Muhammad, LLC. All rights reserved.
