@@ -39,11 +39,11 @@
 <h1 class="disp hero-h" style="font-size:88px;color:#FFFFFF">The Pracademic Playbook</h1>
 <p style="margin:0;font-size:20px;line-height:1.55;color:#CFE7E0;max-width:580px">College sport changes every week. Get what matters, explained in plain language, with one move you can make right now. Written by Dr. U.T. Muhammad.</p>
 </div>
-<form style="flex:1 1 400px;min-width:0;background:#FFFFFF;color:#10251D;border-radius:10px;padding:32px;display:flex;flex-direction:column;gap:16px;box-sizing:border-box">
-<div style="display:flex;flex-direction:column;gap:6px"><label for="n-name" style="font-size:15px;font-weight:600">First name</label><input id="n-name" class="field"></div>
-<div style="display:flex;flex-direction:column;gap:6px"><label for="n-email" style="font-size:15px;font-weight:600">Email</label><input id="n-email" type="email" class="field" placeholder="you@example.com"></div>
-<div style="display:flex;flex-direction:column;gap:6px"><label for="n-role" style="font-size:15px;font-weight:600">I am a...</label><select id="n-role" class="field"><option>Choose one</option><option>Athlete</option><option>Parent or guardian</option><option>Coach or administrator</option><option>Student</option><option>Sport industry professional</option></select></div>
-<button type="button" class="btn">Subscribe</button>
+<form action="https://app.kit.com/forms/10205107/subscriptions" method="post" class="kit-signup" style="flex:1 1 400px;min-width:0;background:#FFFFFF;color:#10251D;border-radius:10px;padding:32px;display:flex;flex-direction:column;gap:16px;box-sizing:border-box">
+<div style="display:flex;flex-direction:column;gap:6px"><label for="n-name" style="font-size:15px;font-weight:600">First name</label><input id="n-name" name="fields[first_name]" class="field" autocomplete="given-name"></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="n-email" style="font-size:15px;font-weight:600">Email</label><input id="n-email" name="email_address" type="email" class="field" required autocomplete="email" placeholder="you@example.com"></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="n-role" style="font-size:15px;font-weight:600">I am a...</label><select id="n-role" name="fields[role]" class="field"><option value="">Choose one</option><option>Athlete</option><option>Parent or guardian</option><option>Coach or administrator</option><option>Student</option><option>Sport industry professional</option></select></div>
+<button type="submit" class="btn">Subscribe</button>
 <p style="margin:0;font-size:13px;color:#3D5A50">No spam. Unsubscribe anytime.</p>
 </form>
 </div>
@@ -76,5 +76,6 @@
 </footer>
 
 </div>
+<script src="/js/signup.js"></script>
 </body>
 </html>
