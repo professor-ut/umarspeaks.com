@@ -113,17 +113,17 @@
 <h2 class="disp sec-h" style="font-size:52px">Tell us about your event</h2>
 <p style="margin:0;font-size:17px;line-height:1.6;color:#3D5A50">Share the basics and you will hear back with availability and next steps.</p>
 </div>
-<form style="flex:1 1 560px;min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px">
-<div style="display:flex;flex-direction:column;gap:6px"><label for="b-name" style="font-size:15px;font-weight:600">Your name</label><input id="b-name" class="field"></div>
-<div style="display:flex;flex-direction:column;gap:6px"><label for="b-org" style="font-size:15px;font-weight:600">Organization</label><input id="b-org" class="field"></div>
-<div style="display:flex;flex-direction:column;gap:6px"><label for="b-email" style="font-size:15px;font-weight:600">Email</label><input id="b-email" type="email" class="field"></div>
-<div style="display:flex;flex-direction:column;gap:6px"><label for="b-date" style="font-size:15px;font-weight:600">Event date</label><input id="b-date" class="field" placeholder="MM/DD/YYYY"></div>
-<div style="display:flex;flex-direction:column;gap:6px"><label for="b-loc" style="font-size:15px;font-weight:600">Location or virtual</label><input id="b-loc" class="field"></div>
-<div style="display:flex;flex-direction:column;gap:6px"><label for="b-size" style="font-size:15px;font-weight:600">Audience size</label><input id="b-size" class="field"></div>
-<div style="display:flex;flex-direction:column;gap:6px"><label for="b-topic" style="font-size:15px;font-weight:600">Topic of interest</label><select id="b-topic" class="field"><option>Choose a topic</option><option>NIL in the Revenue-Sharing Era</option><option>From Project to Product</option><option>What Sport Owes Athletes</option><option>The Athlete Entrepreneur</option><option>Small Markets, Big Wins</option><option>Know Sports seminar series</option></select></div>
-<div style="display:flex;flex-direction:column;gap:6px"><label for="b-budget" style="font-size:15px;font-weight:600">Budget range</label><input id="b-budget" class="field" placeholder="Optional"></div>
-<div style="grid-column:1/-1;display:flex;flex-direction:column;gap:6px"><label for="b-notes" style="font-size:15px;font-weight:600">Anything else we should know?</label><textarea id="b-notes" class="field" style="min-height:120px;padding:12px 14px"></textarea></div>
-<button type="button" class="btn" style="justify-self:start">Send request</button>
+<form class="w3-form" data-thanks="You will hear back with availability and next steps." style="flex:1 1 560px;min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px">
+<div style="display:flex;flex-direction:column;gap:6px"><label for="b-name" style="font-size:15px;font-weight:600">Your name</label><input type="hidden" name="subject" value="New speaking request from umarspeaks.com"><input type="hidden" name="from_name" value="umarspeaks.com"><input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off"><input id="b-name" name="name" class="field" required autocomplete="name"></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="b-org" style="font-size:15px;font-weight:600">Organization</label><input id="b-org" name="organization" class="field" autocomplete="organization"></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="b-email" style="font-size:15px;font-weight:600">Email</label><input id="b-email" name="email" type="email" class="field" required autocomplete="email"></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="b-date" style="font-size:15px;font-weight:600">Event date</label><input id="b-date" name="event_date" class="field" placeholder="MM/DD/YYYY"></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="b-loc" style="font-size:15px;font-weight:600">Location or virtual</label><input id="b-loc" name="location" class="field"></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="b-size" style="font-size:15px;font-weight:600">Audience size</label><input id="b-size" name="audience_size" class="field"></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="b-topic" style="font-size:15px;font-weight:600">Topic of interest</label><select id="b-topic" name="topic" class="field"><option value="">Choose a topic</option><option>NIL in the Revenue-Sharing Era</option><option>From Project to Product</option><option>What Sport Owes Athletes</option><option>The Athlete Entrepreneur</option><option>Small Markets, Big Wins</option><option>Know Sports seminar series</option></select></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="b-budget" style="font-size:15px;font-weight:600">Budget range</label><input id="b-budget" name="budget" class="field" placeholder="Optional"></div>
+<div style="grid-column:1/-1;display:flex;flex-direction:column;gap:6px"><label for="b-notes" style="font-size:15px;font-weight:600">Anything else we should know?</label><textarea id="b-notes" name="notes" class="field" style="min-height:120px;padding:12px 14px"></textarea></div>
+<button type="submit" class="btn" style="justify-self:start">Send request</button>
 </form>
 </div>
 </section>
@@ -147,5 +147,6 @@
 </footer>
 
 </div>
+<script src="/js/forms.js"></script>
 </body>
 </html>
