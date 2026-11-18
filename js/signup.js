@@ -2,7 +2,8 @@
    and shows a thank-you message in place. If the request can't be sent from
    the page, the form falls back to a normal submit to Kit. */
 (function () {
-  document.querySelectorAll('form.kit-signup').forEach(function (form) {
+  function bind(form) {
+    if (form.dataset.kitBound) return; form.dataset.kitBound = '1';
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var button = form.querySelector('button[type="submit"]');
@@ -25,7 +26,9 @@
         })
         .catch(function () { form.submit(); });
     });
-  });
+  }
+  window.KitSignupBind = bind;
+  document.querySelectorAll('form.kit-signup').forEach(bind);
   function alertBox(form, text) {
     var old = form.querySelector('.kit-error'); if (old) old.remove();
     var p = document.createElement('p');

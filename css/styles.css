@@ -67,3 +67,38 @@ textarea.field { padding: 12px 14px; }
   .sec-h { font-size: 36px !important; }
 }
 .disp { overflow-wrap: break-word; }
+
+/* Six-P Pipeline Check-Up */
+#checkup .ck-bar { height: 6px; background: #E4F3F0; border-radius: 3px; overflow: hidden; }
+#checkup .ck-bar span { display: block; height: 100%; background: #00694E; transition: width .3s; }
+#checkup .ck-intro { margin: 0; font-size: 16px; color: #3D5A50; }
+#checkup .ck-form { display: flex; flex-direction: column; gap: 22px; }
+#checkup .ck-field { display: flex; flex-direction: column; gap: 6px; }
+#checkup .ck-field label { font-size: 15px; font-weight: 600; }
+#checkup .ck-q { border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+#checkup .ck-q legend { font-size: 17px; font-weight: 600; line-height: 1.4; margin-bottom: 8px; padding: 0; }
+#checkup .ck-q legend span { color: #00694E; }
+#checkup .ck-opt { display: flex; gap: 10px; align-items: flex-start; padding: 11px 14px; border: 1px solid #CFE7E0; border-radius: 6px; cursor: pointer; font-size: 15px; line-height: 1.4; }
+#checkup .ck-opt:hover { background: #F6FAF8; }
+#checkup .ck-opt input { margin-top: 3px; accent-color: #00694E; }
+#checkup .ck-opt:has(input:checked) { border-color: #00694E; background: #E4F3F0; }
+#checkup .ck-nav { display: flex; gap: 12px; flex-wrap: wrap; }
+#checkup .ck-err { margin: 0; color: #9B2C1F; font-size: 14px; min-height: 1em; }
+#checkup .ck-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+#checkup .ck-card { border-radius: 8px; padding: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 15px; line-height: 1.5; color: #3D5A50; }
+#checkup .ck-stage { background: #E4F3F0; }
+#checkup .ck-align { background: #FBF4DF; border: 2px solid #D9B44A; }
+#checkup .ck-k { font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #00694E; }
+#checkup .ck-v { font-size: 34px; color: #10251D; }
+#checkup .ck-window { margin: 0; font-size: 16px; line-height: 1.6; }
+#checkup .ck-flag { padding: 14px 16px; border-left: 4px solid #9B2C1F; background: #FBEDEA; font-size: 15px; line-height: 1.5; border-radius: 4px; }
+#checkup .ck-next h4, #checkup .ck-nil h4, #checkup .ck-mail h4 { margin: 0 0 8px; font-size: 19px; }
+#checkup .ck-next ol { margin: 0 0 12px; padding-left: 20px; font-size: 16px; line-height: 1.7; }
+#checkup .ck-nil { background: #0B3D2E; color: #FFFFFF; border-radius: 8px; padding: 22px; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
+#checkup .ck-nil .ck-k { color: #D9B44A; }
+#checkup .ck-nil p { margin: 0 0 8px; line-height: 1.5; color: #E4F3F0; }
+#checkup .ck-mail { border-top: 1px solid #D5E6E0; padding-top: 18px; }
+#checkup .ck-mail p { margin: 0 0 12px; color: #3D5A50; font-size: 15px; }
+#checkup .ck-mail form { display: flex; flex-wrap: wrap; gap: 10px; }
+#checkup .ck-mail .field { flex: 1 1 200px; }
+#checkup .ck-consent { flex: 1 1 100%; font-size: 14px; display: flex; gap: 8px; align-items: flex-start; color: #3D5A50; }
