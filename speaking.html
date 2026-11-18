@@ -10,7 +10,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/styles.css">
-<style>@media (max-width:720px){.sp-hero{background:linear-gradient(180deg,rgba(11,61,46,.75),#0B3D2E 70%),url(/assets/ut-muhammad-speaking-bg.jpg?v=3) 85% top/cover no-repeat,#0B3D2E !important}}</style>
+<style>
+.hero-photo{position:absolute;top:0;bottom:0;right:0;width:min(620px,52%);background-repeat:no-repeat;background-size:cover;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 38%);mask-image:linear-gradient(90deg,transparent 0%,#000 38%);pointer-events:none}
+.hero-photo::after{content:"";position:absolute;inset:0;background:rgba(11,61,46,.14)}
+.hero-text{position:relative;z-index:1}
+@media (max-width:900px){.hero-photo{width:100%;opacity:.28;-webkit-mask-image:none;mask-image:none}}
+</style>
 </head>
 <body>
 <div style="min-height:100%;display:flex;flex-direction:column">
@@ -33,9 +38,10 @@
 </div>
 </header>
 
-<section class="sp-hero" style="position:relative;color:#FFFFFF;background:linear-gradient(90deg,#0B3D2E 0%,rgba(11,61,46,.95) 34%,rgba(11,61,46,.45) 56%,rgba(11,61,46,.12) 100%),url(/assets/ut-muhammad-speaking-bg.jpg?v=3) right bottom/auto 100% no-repeat,#0B3D2E">
-<div class="wrap" style="display:flex;flex-wrap:wrap;gap:48px;align-items:center;padding-top:112px;padding-bottom:112px;min-height:560px">
-<div style="flex:0 1 640px;min-width:0;display:flex;flex-direction:column;gap:22px">
+<section class="sp-hero" style="position:relative;overflow:hidden;color:#FFFFFF;background:#0B3D2E">
+<div class="wrap" style="position:relative;display:flex;flex-wrap:wrap;gap:48px;align-items:center;padding-top:112px;padding-bottom:112px;min-height:560px">
+<div class="hero-photo" role="img" aria-label="Photo of Dr. U.T. Muhammad" style="background-image:url(/assets/ut-muhammad-speaking.jpg);background-position:62% top"></div>
+<div class="hero-text" style="flex:0 1 640px;min-width:0;display:flex;flex-direction:column;gap:22px">
 <p class="eyebrow" style="color:#D9B44A">Keynotes · Workshops · Panels · Seminars</p>
 <h1 class="disp hero-h" style="font-size:90px;color:#FFFFFF">The business of sport, told by someone who has lived it.</h1>
 <p style="margin:0;font-size:20px;line-height:1.55;color:#CFE7E0;max-width:600px">Dr. U.T. Muhammad brings the scholar's research and the practitioner's scars to every room: athletic departments, conferences, HBCUs, parent nights and youth sport organizations.</p>
