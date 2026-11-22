@@ -135,7 +135,7 @@
     if (d.result === 'R5') steps += '<a class="btn" href="contact.html">Book a family conversation</a>';
     root.appendChild(el('div', { class: 'ck-next' }, steps));
     if (d.nilInvite) {
-      root.appendChild(el('div', { class: 'ck-nil' }, '<span class="ck-k">Next step · Free</span><h4>NIL Readiness Score</h4><p>' + esc(d.nilInvite) + '</p><a class="btn-gold" href="nil-score.html?from=checkup">Take the NIL Readiness Score</a>'));
+      root.appendChild(el('div', { class: 'ck-nil' }, '<span class="ck-k">Next step · For athletes</span><h4>NIL Readiness Score</h4><p>' + esc(d.nilInvite) + '</p><a class="btn-gold" href="nil-score.html?from=checkup">Take the NIL Readiness Score</a>'));
     }
     var mail = el('div', { class: 'ck-mail' });
     mail.innerHTML = '<h4>Get More Help for Your Stage</h4><p>Join The Pracademic Playbook for Sports Family Planning tips. Optional, and you can unsubscribe any time.</p>' +
