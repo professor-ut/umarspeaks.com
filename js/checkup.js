@@ -77,7 +77,7 @@
 
     var nav = el('div', { class: 'ck-nav' });
     if (state.step > 0) { var back = el('button', { type: 'button', class: 'btn-line' }, 'Back'); back.onclick = function () { save(form, false); state.step--; render(); top(); }; nav.appendChild(back); }
-    nav.appendChild(el('button', { type: 'submit', class: 'btn' }, state.step === 3 ? 'See my results' : 'Continue'));
+    nav.appendChild(el('button', { type: 'submit', class: 'btn' }, state.step === 3 ? 'See the results' : 'Continue'));
     form.appendChild(nav);
     form.appendChild(el('p', { class: 'ck-err', role: 'alert' }));
     form.onsubmit = function (e) {
@@ -118,7 +118,7 @@
         results(x.d); top();
       })
       .catch(function (err) {
-        btn.disabled = false; btn.textContent = 'See my results';
+        btn.disabled = false; btn.textContent = 'See the results';
         form.querySelector('.ck-err').textContent = (err && err.message && err.message !== 'error' && err.message.indexOf('fetch') < 0) ? err.message : 'We could not reach the scoring service. Please try again in a moment.';
       });
   }
