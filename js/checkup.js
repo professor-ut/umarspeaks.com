@@ -131,14 +131,14 @@
       '<div class="ck-card ck-align"><span class="ck-k">Alignment</span><span class="disp ck-v">' + esc(d.title) + '</span><span>' + esc(d.summary) + '</span></div>'));
     root.appendChild(el('p', { class: 'ck-window' }, esc(d.windowLine)));
     if (d.riskFlag) root.appendChild(el('div', { class: 'ck-flag' }, '<strong>Highest-risk window.</strong> ' + esc(d.riskFlag)));
-    var steps = '<h4>What to do next</h4><ol>' + d.steps.map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ol>';
+    var steps = '<h4>What to Do Next</h4><ol>' + d.steps.map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ol>';
     if (d.result === 'R5') steps += '<a class="btn" href="contact.html">Book a family conversation</a>';
     root.appendChild(el('div', { class: 'ck-next' }, steps));
     if (d.nilInvite) {
       root.appendChild(el('div', { class: 'ck-nil' }, '<span class="ck-k">Next step · Free</span><h4>NIL Readiness Score</h4><p>' + esc(d.nilInvite) + '</p><a class="btn-gold" href="nil-score.html?from=checkup">Take the NIL Readiness Score</a>'));
     }
     var mail = el('div', { class: 'ck-mail' });
-    mail.innerHTML = '<h4>Get more help for your stage</h4><p>Join The Pracademic Playbook for Sports Family Planning tips. Optional, and you can unsubscribe any time.</p>' +
+    mail.innerHTML = '<h4>Get More Help for Your Stage</h4><p>Join The Pracademic Playbook for Sports Family Planning tips. Optional, and you can unsubscribe any time.</p>' +
       '<form class="kit-signup" action="https://app.kit.com/forms/10205107/subscriptions" method="post">' +
       '<input type="hidden" name="fields[role]" value="Parent or guardian">' +
       '<input class="field" type="text" name="fields[first_name]" placeholder="First name" aria-label="First name">' +
