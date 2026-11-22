@@ -49,10 +49,10 @@
 <h1 class="disp hero-h" style="font-size:84px">Trainings &amp; tools</h1>
 <p style="margin:0;font-size:20px;line-height:1.55;color:#2D4A40;max-width:720px">Practical tools built from Dr. U.T. Muhammad's research and years in the game, for athletes, families and sport organizations. Instant download or on-demand access.</p>
 <div role="group" aria-label="Filter products" style="display:flex;flex-wrap:wrap;gap:10px;padding-top:10px">
-<button type="button" class="chip" style="background:#00694E;color:#FFFFFF;border-color:#00694E">All</button>
-<button type="button" class="chip">For athletes</button>
-<button type="button" class="chip">For parents</button>
-<button type="button" class="chip">For organizations</button>
+<button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+<button type="button" class="chip" data-filter="athletes" aria-pressed="false">For athletes</button>
+<button type="button" class="chip" data-filter="parents" aria-pressed="false">For parents</button>
+<button type="button" class="chip" data-filter="organizations" aria-pressed="false">For organizations</button>
 </div>
 </div>
 </section>
@@ -63,7 +63,7 @@
 <div style="display:flex;flex-direction:column;gap:12px;max-width:640px">
 <p class="eyebrow">Membership</p>
 <h2 class="disp" style="font-size:52px">Go deeper for under $3 a month.</h2>
-<p style="margin:0;font-size:18px;line-height:1.6;color:#3D5A50">Your free scores stay free. Membership unlocks the full reports, member pricing and, on Playbook, the resource library and premium issues.</p>
+<p style="margin:0;font-size:18px;line-height:1.6;color:#3D5A50">The Six-P Pipeline Check-Up and your NIL Readiness tier stay free. Membership unlocks the full NIL Readiness report, member pricing and, on Playbook, the resource library and premium issues.</p>
 </div>
 <div role="group" aria-label="Billing period" style="display:flex;gap:8px;background:#F6FAF8;border:1px solid #D5E6E0;border-radius:26px;padding:4px">
 <button type="button" class="billing-btn" data-billing="monthly" aria-pressed="true">Monthly</button>
@@ -75,7 +75,7 @@
 <span style="font-size:13px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#20786C">Readiness</span>
 <div style="display:flex;align-items:baseline;gap:8px"><span class="disp" style="font-size:64px" data-price-monthly="$1.99" data-price-annual="$19.99">$1.99</span><span style="font-size:16px;color:#3D5A50" data-per>/ month</span></div>
 <ul style="margin:0;padding-left:20px;font-size:16px;line-height:1.8;color:#10251D">
-<li>Full NIL Readiness and Six-P Check-Up reports</li>
+<li>Full NIL Readiness report, with every category broken down</li>
 <li>Retake the assessments anytime and track progress</li>
 <li>Member pricing on workbooks, trainings and workshops</li>
 </ul>
@@ -164,7 +164,7 @@
 <span style="font-size:13px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6B5310">Coming in 2027</span>
 <h2 class="disp" style="font-size:32px">NIL Market Value Upgrade</h2>
 <p style="margin:0;font-size:16px;line-height:1.6;color:#3D5A50">Add a market value score to your readiness score and get one combined tier.</p>
-<a class="btn-line" href="nil-score.html" style="align-self:flex-start;margin-top:8px">Join the waitlist</a>
+<a class="btn-line" href="nil-score.html#waitlist" style="align-self:flex-start;margin-top:8px">Join the waitlist</a>
 </div>
 </article>
 
@@ -217,6 +217,29 @@
     document.getElementById('billing-note').textContent = notes[period];
   }
   buttons.forEach(function (b) { b.addEventListener('click', function () { setBilling(b.dataset.billing); }); });
+})();
+</script>
+<style>.chip[aria-pressed="true"]{background:#00694E;color:#FFFFFF;border-color:#00694E}</style>
+<script>
+// Product filter: reads each product's audience label
+(function () {
+  var chips = document.querySelectorAll('[data-filter]');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('article'));
+  cards.forEach(function (c) {
+    var label = (c.querySelector('span') || {}).textContent || '';
+    label = label.toLowerCase(); var tags = [];
+    if (/athlete|coming in 2027/.test(label)) tags.push('athletes');
+    if (/parent|famil/.test(label)) tags.push('parents');
+    if (/organization/.test(label)) tags.push('organizations');
+    c.dataset.for = tags.join(' ');
+  });
+  chips.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var f = b.dataset.filter;
+      chips.forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+      cards.forEach(function (c) { c.style.display = (f === 'all' || !c.dataset.for || c.dataset.for.indexOf(f) > -1) ? '' : 'none'; });
+    });
+  });
 })();
 </script>
 </body>

@@ -118,12 +118,13 @@
 <h2 class="disp sec-h" style="font-size:52px;color:#FFFFFF">NIL Market Value</h2>
 <p style="margin:0;font-size:18px;line-height:1.6;color:#CFE7E0">Your readiness tells you if you are prepared. Your market value tells you what you are worth. The paid upgrade combines both into one tier you can take into any deal conversation.</p>
 </div>
-<form style="flex:1 1 380px;min-width:0;display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end">
+<form id="waitlist" class="kit-signup" action="https://app.kit.com/forms/10205107/subscriptions" method="post" style="flex:1 1 380px;min-width:0;display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end">
+<input type="hidden" name="fields[role]" value="Athlete">
 <div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px">
 <label for="mv-email" style="font-size:14px;font-weight:600;color:#FFFFFF">Join the waitlist</label>
-<input id="mv-email" type="email" placeholder="you@example.com" style="min-height:48px;padding:0 14px;border:1px solid #CFE7E0;border-radius:4px;font-size:16px;font-family:inherit">
+<input id="mv-email" type="email" name="email_address" required placeholder="you@example.com" style="min-height:48px;padding:0 14px;border:1px solid #CFE7E0;border-radius:4px;font-size:16px;font-family:inherit">
 </div>
-<button type="button" class="btn" style="background:#D9B44A;color:#10251D">Notify me</button>
+<button type="submit" class="btn" style="background:#D9B44A;color:#10251D">Notify me</button>
 </form>
 </div>
 </section>
@@ -154,5 +155,6 @@
 </footer>
 
 </div>
+<script src="/js/signup.js"></script>
 </body>
 </html>
